@@ -176,3 +176,16 @@ fieldset legend{flex:0 0 100%}
 .result .hint{text-align:left}
 .result .btn{margin-top:auto;align-self:flex-start}
 .result ol{margin-bottom:14px}
+
+/* ---- Co-founders ---- */
+.founders{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px;margin-top:36px}
+.founder{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start;padding:24px 0;border-top:3px solid var(--navy)}
+.founder img,.avatar{width:150px;height:150px;border-radius:var(--r);object-fit:cover;border-bottom:5px solid var(--amber)}
+.avatar{display:grid;place-items:center;background:var(--navy);color:#fff;font:700 2.6rem Sora,sans-serif;letter-spacing:.04em}
+.founder h3{font-size:1.25rem;margin-bottom:2px}
+.founder .role{color:var(--amber-d);font-weight:600;margin-bottom:10px;font-size:.98rem}
+.founder p{color:var(--muted)}
+.founder a{display:inline-block;margin-top:8px;font-weight:600}
+@media(max-width:860px){.founders{grid-template-columns:1fr}}
+@media(max-width:480px){.founder{grid-template-columns:1fr}.founder img,.avatar{width:120px;height:120px}}
+.facts{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.95rem}.facts li{margin-bottom:3px}
