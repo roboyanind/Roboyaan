@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roboyaan | Hands-on AI, Electronics and Drone Workshops for Schools and Colleges</title>
+<meta name="description" content="Roboyaan is a new education team in Siliguri running hands-on workshops in AI and machine learning, electronics and robotics, and drone technology for schools and colleges.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b0b5e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className="js"</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img src="assets/logo-mark.png" alt="" width="40" height="40"><span>Roboyaan</span></a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a href="#programs">Programs</a>
+      <a href="#how">How it works</a>
+      <a href="#planner">Plan a workshop</a>
+      <a href="#who">Who it's for</a>
+      <a href="#about">About us</a>
+      <a class="btn" href="#contact">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="circuit" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path pathLength="1" d="M0 120H220L260 160H520L560 120H900"/>
+    <path pathLength="1" d="M0 300H140L190 350H430L470 310H760L800 350H1200"/>
+    <path pathLength="1" d="M300 600V480L340 440H640L680 480V600"/>
+    <path pathLength="1" d="M760 0V90L800 130H1010L1050 90H1200"/>
+    <circle cx="900" cy="120" r="6"/><circle cx="1200" cy="350" r="6"/><circle cx="680" cy="480" r="6"/><circle cx="1200" cy="90" r="6"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <h1>Students learn AI, electronics and drones by building with them.</h1>
+      <p>Roboyaan runs practical workshops with schools and colleges. We are a new team based in Siliguri, and we are looking for our first partner institutions.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Plan a workshop with us</a>
+        <a class="btn ghost" href="#programs">See the programs</a>
+      </div>
+    </div>
+    <figure>
+      <img src="assets/hero_workshop.jpg" alt="Students working on robotics kits and laptops in a classroom">
+      <!-- TODO: replace with a real Roboyaan photo as soon as you have one -->
+    </figure>
+  </div>
+</section>
+
+<section id="programs" class="alt">
+  <div class="wrap">
+    <h2>Three areas, taught hands-on</h2>
+    <p class="lead">Each workshop is built around making something. Topics below are what we typically cover; we adjust depth and pace to the class or year group.</p>
+
+    <div class="tabs" role="tablist" aria-label="Programs"><button role="tab" id="t0" aria-controls="p0" aria-selected="true">AI &amp; ML</button><button role="tab" id="t1" aria-controls="p1" aria-selected="false">Electronics &amp; Robotics</button><button role="tab" id="t2" aria-controls="p2" aria-selected="false">Drones</button></div>
+    <div class="panels">
+      <div class="prog panel" role="tabpanel" id="p0" aria-labelledby="t0"><img src="assets/ai_ml_workshop.jpg" alt="Students learning neural networks with code on a laptop"><div><h3>AI and Machine Learning</h3><p>Students learn how computers learn from data, using Python and small projects they can run on ordinary laptops.</p><ul>
+          <li>Python basics for data</li>
+          <li>How models are trained and tested</li>
+          <li>Simple image and text projects</li>
+          <li>Using AI tools responsibly</li>
+        </ul></div></div>
+      <div class="prog panel" role="tabpanel" id="p1" aria-labelledby="t1" hidden><img src="assets/electronics_robotics.jpg" alt="A student soldering a circuit board at a workbench"><div><h3>Electronics and Robotics</h3><p>Students wire real circuits, program microcontrollers and see their code move something in the physical world.</p><ul>
+          <li>Circuits, sensors and Arduino boards</li>
+          <li>Basic soldering with supervision</li>
+          <li>Building and programming a small robot</li>
+          <li>Intro to embedded electronics and IoT</li>
+        </ul></div></div>
+      <div class="prog panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><img src="assets/drone_technology.jpg" alt="Students holding drone controllers while an instructor explains"><div><h3>Drone Technology</h3><p>Students learn how drones fly, what the parts do and how they are controlled, with flying done safely and within local rules.</p><ul>
+          <li>How multirotor drones work</li>
+          <li>Parts: motors, flight controller, battery</li>
+          <li>Flight basics and safety</li>
+          <li>Uses such as mapping and photography</li>
+        </ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How a workshop works</h2>
+    <p class="lead">Simple on purpose. Most of the planning happens before we arrive.</p>
+    <ol class="steps">
+      <li><h3>Talk to us</h3><p>Tell us your students' age, group size, time available and what you want them to get out of it.</p></li>
+      <li><h3>We plan it</h3><p>We propose a topic, schedule and equipment list, and agree the cost with you before anything is booked.</p></li>
+      <li><h3>We run it</h3><p>We bring the kits and lead the session. Students spend most of the time building, not listening.</p></li>
+      <li><h3>We follow up</h3><p>We ask for your feedback and share what the students made, so the next workshop is better.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="who" class="alt">
+  <div class="wrap">
+    <h2>Who this is for</h2>
+    <div class="who">
+      <div><h3>School principals</h3><p>Add practical STEM sessions to your school without setting up labs or hiring specialists.</p></div>
+      <div><h3>Colleges and educational partners</h3><p>Co-run workshops, bootcamps or club sessions. We are open to different ways of working together.</p></div>
+      <div><h3>Parents</h3><p>See what your child will actually do in a session before you decide. Ask us anything.</p></div>
+      <div><h3>Students</h3><p>No experience needed to start. If you are curious about how things work, you are who we built this for.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="planner">
+  <div class="wrap">
+    <h2>Sketch your workshop</h2>
+    <p class="lead">Choose a program, a starting level and how long you want to run it. You get a month-by-month draft. It is only a starting point; we refine it together before anything is agreed.</p>
+    <div class="planner">
+      <div class="controls">
+        <fieldset><legend>Program</legend>
+          <label class="chip"><input type="radio" name="prog" value="ai" checked><span>AI &amp; ML</span></label>
+          <label class="chip"><input type="radio" name="prog" value="elec"><span>Electronics &amp; Robotics</span></label>
+          <label class="chip"><input type="radio" name="prog" value="drone"><span>Drones</span></label>
+        </fieldset>
+        <fieldset><legend>Level</legend>
+          <label class="chip"><input type="radio" name="lvl" value="Beginner" checked><span>Beginner</span></label>
+          <label class="chip"><input type="radio" name="lvl" value="Intermediate"><span>Intermediate</span></label>
+          <label class="chip"><input type="radio" name="lvl" value="Advanced"><span>Advanced</span></label>
+        </fieldset>
+        <fieldset><legend>Length</legend>
+          <label class="chip"><input type="radio" name="len" value="3" checked><span>Sprint · 3 months</span></label>
+          <label class="chip"><input type="radio" name="len" value="6"><span>Run · 6 months</span></label>
+          <label class="chip"><input type="radio" name="len" value="12"><span>Marathon · 12 months</span></label>
+        </fieldset>
+      </div>
+      <div class="result" aria-live="polite">
+        <h3 id="rTitle"></h3>
+        <ol id="rList"></ol>
+        <p class="hint">Session days, group size, kits and trainers are agreed with you. Beginner means no experience needed; Intermediate and Advanced skip the early basics.</p>
+        <button class="btn" id="useOutline" type="button">Use this in my enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="honest">
+  <div class="wrap">
+    <h2>We are just getting started</h2>
+    <p>Roboyaan is a young academy. We have not run hundreds of workshops yet, and we will not pretend otherwise. What we do have is a clear way of teaching: real hardware, real code and students building things themselves.</p>
+    <p>If you partner with us now, you help shape the programs, and we will give your students our full attention. We will share real results and real feedback here as we gather them.</p>
+    <a class="btn" href="#contact">Be one of our first partners</a>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <h2>Let's talk about your students</h2>
+    <p class="lead">Choose what fits you best. The form adapts, and you can send it by email or WhatsApp. We reply personally.</p>
+    <div class="reach">
+      <a class="rcard" href="mailto:roboyan.info@gmail.com"><b>Email</b><span>roboyan.info@gmail.com</span></a>
+      <a class="rcard" href="tel:+916296113701"><b>Call</b><span>+91 62961 13701</span></a>
+      <a class="rcard" href="https://wa.me/916296113701" target="_blank" rel="noopener"><b>WhatsApp</b><span>Message us directly</span></a>
+      <div class="rcard"><b>Based in</b><span>Siliguri, West Bengal</span></div>
+    </div>
+    <form id="contactForm" novalidate>
+      <fieldset class="types"><legend>What is this about?</legend>
+        <label class="tcard"><input type="radio" name="type" value="School or college workshop" checked><span><b>Workshop for my school or college</b><small>For principals, teachers and partners</small></span></label>
+        <label class="tcard"><input type="radio" name="type" value="Parent or student question"><span><b>A question as a parent or student</b><small>Programs, safety, what to expect</small></span></label>
+        <label class="tcard"><input type="radio" name="type" value="Partnership"><span><b>Partnership or collaboration</b><small>Co-run programs, sponsorship, mentoring</small></span></label>
+      </fieldset>
+      <div class="row">
+        <label>Your name<input name="name" required maxlength="80" autocomplete="name"></label>
+        <label>Phone (optional)<input name="phone" type="tel" maxlength="20" autocomplete="tel"></label>
+      </div>
+      <div class="adapt" data-for="School or college workshop|Partnership">
+        <div class="row">
+          <label>School or institution<input name="institution" maxlength="100" autocomplete="organization"></label>
+          <label>Your role<select name="role"><option value="">Choose one</option><option>Principal or administrator</option><option>Teacher or coordinator</option><option>Other</option></select></label>
+        </div>
+        <div class="row">
+          <label>Students (approximate)<input name="count" type="number" min="1" max="2000" inputmode="numeric"></label>
+          <label>When are you thinking?<select name="when"><option value="">Choose one</option><option>Within a month</option><option>In 1 to 3 months</option><option>Later this year</option><option>Just exploring</option></select></label>
+        </div>
+      </div>
+      <div class="adapt" data-for="Parent or student question" hidden>
+        <div class="row">
+          <label>Child's class (or your class)<input name="grade" maxlength="30"></label>
+          <label>Most interested in<select name="interest"><option value="">Not sure yet</option><option>AI &amp; Machine Learning</option><option>Electronics &amp; Robotics</option><option>Drone Technology</option></select></label>
+        </div>
+      </div>
+      <label>Message<textarea name="message" rows="5" maxlength="600" required placeholder="Tell us what you have in mind"></textarea>
+        <span class="hint"><span id="count">0</span> / 600</span></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="actions">
+        <button class="btn" type="submit" data-via="email">Send by email</button>
+        <button class="btn ghost" type="submit" data-via="whatsapp">Send on WhatsApp</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div id="fallback" class="fallback" hidden>
+        <p>Your email or WhatsApp app should have opened with the message ready. If nothing opened, copy it and send it to <b>roboyan.info@gmail.com</b>.</p>
+        <button class="btn ghost" type="button" id="copyMsg">Copy message</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Roboyaan, Siliguri</span>
+    <span>AI &amp; Machine Learning · Electronics &amp; Robotics · Drone Technology</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
