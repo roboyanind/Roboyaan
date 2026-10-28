@@ -165,25 +165,38 @@ if (form) {
     const name = f.get('name').trim();
     const phone = f.get('phone').trim();
     const msg = f.get('message').trim();
+    const type = f.get('type');
     
+    // STRICT VALIDATION: Blocks submission and targets the missing field
     if (!name) { form.elements.name.focus(); say('Please enter your name.', true); return unlock(); }
     if (!phone || phone.length < 9) { form.elements.phone.focus(); say('Please enter a valid phone number.', true); return unlock(); }
+    
+    if (type === 'School or college workshop' || type === 'Partnership') {
+      if (!f.get('institution').trim()) { form.elements.institution.focus(); say('Please enter the school or institution name.', true); return unlock(); }
+      if (!f.get('role')) { form.elements.role.focus(); say('Please select your role.', true); return unlock(); }
+      if (!f.get('count')) { form.elements.count.focus(); say('Please estimate the number of students.', true); return unlock(); }
+      if (!f.get('when')) { form.elements.when.focus(); say('Please select a timing option.', true); return unlock(); }
+    } else {
+      if (!f.get('grade').trim()) { form.elements.grade.focus(); say('Please enter the class or grade.', true); return unlock(); }
+      if (!f.get('interest')) { form.elements.interest.focus(); say('Please select what you are most interested in.', true); return unlock(); }
+    }
+
     if (msg.length < 10) { msgEl.focus(); say('Please write a short message (at least 10 characters).', true); return unlock(); }
     
     const wait = waitTime();
     if (wait) { say('You have sent a message recently. Please wait ' + fmt(wait) + ' before sending another, or call us.', true); return unlock(); }
 
-    // Compile the final message cleanly
-    const lines = [`Name: ${name}`, `About: ${f.get('type')}`];
-    [['institution', 'Institution'], ['role', 'Role'], ['count', 'Students'], ['when', 'Timing'],
-     ['grade', 'Class'], ['interest', 'Interested in'], ['phone', 'Phone']].forEach(([k, label]) => {
-      const el = form.elements[k];
-      if (el && !el.closest('[hidden]') && f.get(k)) lines.push(`${label}: ${f.get(k)}`);
-    });
-    lines.push('', msg);
-    lastMessage = lines.join('\n');
-    
     if (via === 'whatsapp') {
+      // Build text specifically for WhatsApp
+      const lines = [`Name: ${name}`, `About: ${type}`];
+      [['institution', 'Institution'], ['role', 'Role'], ['count', 'Students'], ['when', 'Timing'],
+       ['grade', 'Class'], ['interest', 'Interested in'], ['phone', 'Phone']].forEach(([k, label]) => {
+        const el = form.elements[k];
+        if (el && !el.closest('[hidden]') && f.get(k)) lines.push(`${label}: ${f.get(k)}`);
+      });
+      lines.push('', msg);
+      lastMessage = lines.join('\n');
+      
       record();
       say('Opening WhatsApp...');
       fallback.hidden = false;
@@ -193,15 +206,15 @@ if (form) {
       // Direct Background Email via Web3Forms
       say('Sending message securely...');
       
-      // Inject API details silently
-      f.append('access_key', 'e2c268be-e8e0-48dc-b574-f1385cf450f0');
-      f.set('message', lastMessage);
-      f.append('subject', 'New Roboyaan Enquiry from ' + name);
+      // Let Web3Forms format the raw data beautifully
+      const emailData = new FormData(form);
+      emailData.append('access_key', 'e2c268be-e8e0-48dc-b574-f1385cf450f0');
+      emailData.append('subject', 'New Roboyaan Enquiry from ' + name);
       
       try {
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          body: f
+          body: emailData
         });
         const data = await response.json();
         
