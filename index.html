@@ -37,11 +37,18 @@
 <main id="top">
 <section class="hero">
   <svg class="circuit" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <path pathLength="1" d="M0 120H220L260 160H520L560 120H900"/>
-    <path pathLength="1" d="M0 300H140L190 350H430L470 310H760L800 350H1200"/>
-    <path pathLength="1" d="M300 600V480L340 440H640L680 480V600"/>
-    <path pathLength="1" d="M760 0V90L800 130H1010L1050 90H1200"/>
-    <circle cx="900" cy="120" r="6"/><circle cx="1200" cy="350" r="6"/><circle cx="680" cy="480" r="6"/><circle cx="1200" cy="90" r="6"/>
+    <!-- Top line framing -->
+    <path pathLength="1" d="M0 80 H450 L490 40 H1000 L1040 80 H1200"/>
+    <!-- Bottom line framing -->
+    <path pathLength="1" d="M0 540 H250 L290 580 H850 L890 540 H1200"/>
+    <!-- Small accent top right -->
+    <path pathLength="1" d="M1200 180 H1150 L1110 140 V0"/>
+    <!-- Small accent bottom left -->
+    <path pathLength="1" d="M0 400 H100 L140 440 V600"/>
+    <!-- Circuit nodes -->
+    <circle cx="450" cy="80" r="6"/><circle cx="1040" cy="80" r="6"/>
+    <circle cx="290" cy="580" r="6"/><circle cx="850" cy="540" r="6"/>
+    <circle cx="1110" cy="140" r="6"/><circle cx="140" cy="440" r="6"/>
   </svg>
   <div class="wrap">
     <div>
