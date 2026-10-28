@@ -162,8 +162,12 @@ if (form) {
     if (f.get('website')) return unlock(); 
     if (Date.now() - loadedAt < 4000) { say('Please take a moment to fill in the form, then try again.', true); return unlock(); }
     
-    const name = f.get('name').trim(), msg = f.get('message').trim();
+    const name = f.get('name').trim();
+    const phone = f.get('phone').trim();
+    const msg = f.get('message').trim();
+    
     if (!name) { form.elements.name.focus(); say('Please enter your name.', true); return unlock(); }
+    if (!phone || phone.length < 9) { form.elements.phone.focus(); say('Please enter a valid phone number.', true); return unlock(); }
     if (msg.length < 10) { msgEl.focus(); say('Please write a short message (at least 10 characters).', true); return unlock(); }
     
     const wait = waitTime();
