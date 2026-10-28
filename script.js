@@ -80,7 +80,7 @@ form.addEventListener('submit', e => {
   say('Opening ' + (via === 'whatsapp' ? 'WhatsApp' : 'your email app') + '...');
   fallback.hidden = false;
   if (via === 'whatsapp') window.open('https://wa.me/916296113701?text=' + encodeURIComponent(lastMessage), '_blank', 'noopener');
-  else location.href = 'mailto:roboyan.info@gmail.com?subject=' + encodeURIComponent('Enquiry from ' + name) + '&body=' + encodeURIComponent(lastMessage);
+  else location.href = 'mailto:roboyaan.info@gmail.com?subject=' + encodeURIComponent('Enquiry from ' + name) + '&body=' + encodeURIComponent(lastMessage);
 });
 document.getElementById('copyMsg').addEventListener('click', async e => {
   try { await navigator.clipboard.writeText(lastMessage); e.target.textContent = 'Copied'; }
@@ -123,8 +123,9 @@ tabs.forEach((t, i) => {
 // Level sets where students start (skips early basics); length sets how far they go.
 const plan = {
   ai: ['AI &amp; Machine Learning', [
-    'What AI is and how it learns from data','Python basics: variables, loops, functions','Working with data: tables, charts, cleaning',
-    'Your first model: predict and measure accuracy','Image classification project','Text and language projects',
+      'Python basics: variables, loops, and data handling','Working with data: cleaning, processing, and visualization','Building and testing your first machine learning models',
+      'Computer vision: object detection and image classification','Introduction to neural networks and deep learning','Fine-tuning custom AI models for specific tasks',
+      'Working with Large Language Models (LLMs) locally','Optimizing offline AI models for standard computer hardware','Integrating your AI models into custom web backends','Deploying your own full-stack AI application']],
     'Neural networks explained step by step','Improving models: more data, tuning, testing','Using AI tools and APIs responsibly','Putting a small AI app online for others to try']],
   elec: ['Electronics &amp; Robotics', [
     'Circuits on a breadboard: voltage, current, resistance','Arduino basics: LEDs, buttons, serial output','Sensors: distance, temperature, light',
