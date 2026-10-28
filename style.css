@@ -1,6 +1,6 @@
 :root{--ink:#14143c;--navy:#0b0b5e;--muted:#55587a;--paper:#f7f8fc;--white:#fff;--line:#dcdfee;--amber:#f28c1b;--amber-d:#b85f00;--r:8px}
 *{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-padding-top:76px}
 body{font:17px/1.65 "Source Sans 3",system-ui,sans-serif;color:var(--ink);background:var(--white)}
 h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;color:var(--navy)}
 img{max-width:100%;display:block}
@@ -20,8 +20,21 @@ header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid 
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.3rem Sora,sans-serif}
 .brand{line-height:1}.brand img{height:40px;width:40px;object-fit:contain}
 nav{display:flex;gap:26px;align-items:center}
-nav a{text-decoration:none;font-weight:600;color:var(--ink)}
-nav a:hover{color:var(--amber-d)}
+nav a.nav-btn {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 8px 14px;
+  background: var(--paper);
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  transition: all 0.2s;
+}
+nav a.nav-btn:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
 nav .btn{padding:9px 18px;color:#fff}
 .menu{display:none;background:none;border:2px solid var(--navy);border-radius:var(--r);padding:6px 12px;font:600 .95rem inherit;color:var(--navy)}
 .hero{padding:64px 0 88px}
@@ -161,7 +174,6 @@ a.rcard:hover{border-color:var(--amber);transform:translateY(-2px)}
 .fallback .btn{justify-self:start}
 @media(max-width:860px){.reach{grid-template-columns:1fr 1fr}.types{grid-template-columns:1fr}#contactForm{padding:22px}}
 @media(max-width:520px){.reach{grid-template-columns:1fr}}
-
 
 .result ol{list-style:none;padding:0}.result li b{color:var(--amber-d)}
 
